@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -18,12 +19,23 @@ int main(){
         }
 
         for (int k=0; k<marcas; k++){
-            if (quantia%precos[k] > maior){
-                maior = quantia%precos[k];
+            // int divisor = quantia/precos[k];
+            // precos[k] = precos[k] * divisor;
+            // if ( (quantia - precos[k]) > maior ){
+            //     maior = quantia - precos[k];
+            // }
+
+
+            double fixo = precos[k];
+            while (precos[k]+fixo <= quantia){
+                precos[k] = precos[k] + fixo;
+            }
+            if ( (quantia-precos[k]) > maior ){
+                maior = quantia-precos[k];
             }
         }
 
-        cout << maior << '\n';
+        cout << fixed << setprecision(2) << maior << '\n';
     }
 
 
