@@ -19,22 +19,17 @@ int main(){
         }
 
         for (int k=0; k<marcas; k++){
-            // int divisor = quantia/precos[k];
-            // precos[k] = precos[k] * divisor;
-            // if ( (quantia - precos[k]) > maior ){
-            //     maior = quantia - precos[k];
-            // }
-
-
             double fixo = precos[k];
-            while (precos[k]+fixo <= quantia){
+            
+            if (precos[k] <= quantia){
+                while (precos[k] <= quantia){
                 precos[k] = precos[k] + fixo;
-            }
-            if ( (quantia-precos[k]) > maior ){
-                maior = quantia-precos[k];
+                }
+                if ((quantia-(precos[k]-fixo)) > maior ){
+                maior = quantia-(precos[k]-fixo);
+                }
             }
         }
-
         cout << fixed << setprecision(2) << maior << '\n';
     }
 
