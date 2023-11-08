@@ -23,6 +23,6 @@ int main(){
         }
     }
 
-    cout << quant << endl;
+    cout << quant << endl;  
 }
 
