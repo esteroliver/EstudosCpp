@@ -4,6 +4,7 @@ using namespace std;
 
 int main(){
     int tiks, clts;
+    cin >> tiks >> clts;
     multiset<int> array_tiks;
     for(int i = 0; i < tiks; i++){
         int x;
@@ -20,5 +21,4 @@ int main(){
         }
         else cout << "-1" << endl;
     }
-    sort(array_tiks.begin(), array_tiks.end());
 }
