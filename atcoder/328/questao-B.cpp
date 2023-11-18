@@ -27,7 +27,7 @@ int main(){
     int ans = 0;
     int x = 1;
     while (x <= meses){
-        for(int i = 1; i < dias[x-1]; i++){
+        for(int i = 1; i <= dias[x-1]; i++){
             if (algiguais(i) == algiguais(x) && algiguais(i) > 0 && algiguais(x) > 0){
                 ans++;
             }
