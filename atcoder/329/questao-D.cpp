@@ -13,22 +13,8 @@ int main(){
         cin >> x;
         votos[i] = x;
         candidatos[x-1]++;
-    }
-    int maior = candidatos[0];
-    for (int i = 1; i < n; i++){
-        if (candidatos[i] > maior) maior = candidatos[i];
-    }
-    int vencedor = maior;
-    bool iguais = false;
-    if (maior == candidatos[0]) iguais = true;
-    int menor = votos[0];
-    if (iguais){
-        for (int i = 0; i < m; i ++){
-            if (votos[i] < menor) menor = votos[i];
-        }
-        vencedor = menor;
-    }
+        int maior = *max_element(candidatos, candidatos + n);
     
-    cout << vencedor << endl;
-    
+        cout << vencedor << endl;
+    }
 }

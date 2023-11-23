@@ -5,12 +5,13 @@ using namespace std;
 int main(){
     int n; cin >> n;
     string s; cin >> s;
-    int sub_s = 1;
-    char fixo = s[0];
-    for (int i = 1; i < n; i++){
-        if (fixo == s[i]) sub_s++;
-        else fixo = s[i];
+    set<char> s_c;
+    for(int i = 0; i < n; i++){
+        s_c.insert(s[i]); //as diferentes letras
     }
-    cout << sub_s << endl;
+    auto id = s_c.begin();
+    int quant[s_c.size()]; //vai contar a string com mais caracteres
+    for (int i = 0; i < s_c.size(); i++) quant[i] = 0;
+    
     return 0;
 }
