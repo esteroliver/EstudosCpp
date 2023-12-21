@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int dfs(vector<vector<int>> grafo , vector<bool> visitados, int i){
+void dfs(vector<vector<int>> &grafo , vector<bool> &visitados, int i){
     visitados[i] = true;
     for (int x : grafo[i]){
         if (!visitados[x]) dfs(grafo, visitados, x);
@@ -26,7 +26,26 @@ int main(){
             g[v].push_back(u);
             g[v].push_back(u);
         }
+        int resp = 0;
+        vector<bool> visited(quant, false);
+        int inc = 0;
+        bool v = false;
+        while(!v){
+            int ver = 0;
+            if(!visited[inc]){
+                dfs(g, visited, inc);
+                resp++;
+            }
+            for (int i = 0; i < quant; i++){
+                if(visited[i]) ver++;
+            }
+            if (ver == quant) v = true;
+            inc++;
+        }
+        cout << resp << endl;
     }
+
+    
 
     return 0;
 }
