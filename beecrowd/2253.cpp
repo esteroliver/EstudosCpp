@@ -3,10 +3,8 @@
 using namespace std;
 
 int main(){
-    int x;
-    while(cin >> x){
-        string senha;
-        cin >> senha;
+    string senha;
+    while(getline(cin,senha)){
         string valida = "Senha invalida.";
         bool max = false;
         bool min = false;
