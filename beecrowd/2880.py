@@ -2,10 +2,18 @@ m = input()
 c = input()
 
 quant = len(m) - len(c) + 1
-
-x = 0
-quant2 = len(c)
+y = 0
+resp = 0
 
 for i in range(quant):
-    print(" " * x, c)
-    x += 1
+    x = 0
+    for l in range(len(c)):
+        if(c[x] == m[l+y]): 
+            break
+        else:
+            x += 1
+    if(x == len(c)):
+        resp += 1
+    y += 1
+
+print(resp)
