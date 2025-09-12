@@ -1,10 +1,10 @@
 # EstudosC++
 Arquivos de estudos e exercícios da linguagem C++. Foco em programação competitiva.
 
-- [Exercícios](url)
-- [Introdução](url)
-- [Grafos](url)
-- [Método guloso](url)
+- [Exercícios](exercicios)
+- [Introdução](introducao)
+- [Grafos](grafos)
+- [Método guloso](metodo-guloso)
 
 ## Como rodar arquivo C++?
 - ```sudo apt update```
@@ -22,4 +22,5 @@ int main(){
     // resolução aqui
     return 0;
 }
+
 ```
